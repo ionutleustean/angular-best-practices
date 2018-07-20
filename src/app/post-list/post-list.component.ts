@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostDTO} from "../model/postDTO";
 import {Router} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-post-list',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class PostListComponent implements OnInit {
 
-  @Input() posts: PostDTO;
+  @Input() posts: Observable<PostDTO[]>;
   @Output() onDelete: EventEmitter<string> = new EventEmitter();
 
   isVisible : boolean = false;

@@ -1,0 +1,19 @@
+<div *ngFor="let post of posts | async">
+  <mat-card class="post-card">
+
+
+    <mat-card-header>
+      <mat-card-title>
+        {{post.title}}
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="post.thumbnailUrl" alt="">
+
+    <mat-card-content>
+      {{post.body}}
+
+    </mat-card-content>
+
+
+  </mat-card>
+</div>

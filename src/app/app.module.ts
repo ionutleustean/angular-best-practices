@@ -9,7 +9,7 @@ import { PostGridComponent } from './post-grid/post-grid.component';
 import { PageListComponent } from './page-list/page-list.component';
 import { PageDetailComponent } from './page-detail/page-detail.component';
 import {HttpClientModule} from "@angular/common/http";
-import {MatCardModule} from "@angular/material";
+import {MatButtonModule, MatCardModule} from "@angular/material";
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import {MatCardModule} from "@angular/material";
     AppRoutingModule,
     MatToolbarModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,4 +24,24 @@ export class PostResourceService {
     });
   }
 
+  deleteOne(id) {
+    let headers: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return <Observable<any>>this.httpClient.delete(this.baseHref + '/' + id, {
+      headers: headers
+    });
+  }
+
+  getOne(id) {
+    let headers: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return <Observable<any>>this.httpClient.get(this.baseHref + '/' + id, {
+      headers: headers
+    });
+  }
+
 }

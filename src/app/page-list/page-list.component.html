@@ -3,12 +3,15 @@
 
 
   <div class="content">
-    <app-post-grid [posts]="posts"></app-post-grid>
+    <app-post-grid [posts]="posts" (onDelete)="deletePost($event)"></app-post-grid>
 
   </div>
 
   <div class="side">
-    <app-post-list [posts]="latestPosts"></app-post-list>
+    <h3> Latest posts </h3>
+    <button mat-stroked-button color="primary" (click)="postList.showDetail()">Toogle</button>
+
+    <app-post-list [posts]="latestPosts"  (onDelete)="deletePost($event)" #postList></app-post-list>
   </div>
 
 </div>

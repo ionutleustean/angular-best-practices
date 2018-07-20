@@ -7,12 +7,16 @@
         {{post.title}}
       </mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="post.thumbnailUrl" alt="">
+    <img mat-card-image [src]="post.thumbnailUrl" alt="" (click)="navigateToDetail(post.id)">
+
+    <button mat-stroked-button color="primary" (click)="onDeleteClick(post.id)">Delete</button>
 
     <mat-card-content>
       {{post.body}}
 
     </mat-card-content>
+
+
 
 
   </mat-card>

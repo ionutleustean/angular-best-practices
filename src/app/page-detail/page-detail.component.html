@@ -1,3 +1,12 @@
-<p>
-  page-detail works!
-</p>
+
+
+
+<button mat-stroked-button color="primary" (click)="navigateBack()">Go Back</button>
+
+
+
+<div *ngIf="post">
+  <h1> {{post.title}} </h1>
+  <img mat-card-image [src]="post.url" alt="" (click)="navigateToDetail(post.id)">
+  <p> {{ post.body}}</p>
+</div>
